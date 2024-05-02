@@ -12,8 +12,10 @@ vim.keymap.set("n", "q?", "<nop>")
 vim.keymap.set("n", "q/", "<nop>")
 vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
 vim.keymap.set("n", "<leader>j", "J")
-vim.keymap.set("n", "<leader>o", "o<Esc>")
-vim.keymap.set("n", "<leader>O", "O<Esc>")
+-- Add empty lines before and after cursor line
+vim.keymap.set("n", "gO", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
+vim.keymap.set("n", "go", "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>")
+
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["*y]])
