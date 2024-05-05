@@ -2,13 +2,12 @@ return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
     -- 引入对应语言
-		"leoluz/nvim-dap-go",
-		"rcarriga/nvim-dap-ui",
+		"nvim-neotest/nvim-nio",
+        "rcarriga/nvim-dap-ui",
 	},
 	config = function()
     require("dapui").setup()
     -- 启动对应语言
-		require("dap-go").setup()
 
 		local dap, dapui = require("dap"), require("dapui")
 
