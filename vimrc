@@ -55,7 +55,9 @@ set incsearch
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
-nmap q: <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap q: <Nop> " 
+nmap q? <Nop> " 
+nmap q/ <Nop> " 
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
@@ -64,12 +66,6 @@ set noerrorbells visualbell t_vb=
 " sometimes be convenient.
 set mouse+=a
 
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
 if &term =~ '^xterm'
   " solid underscore
   let &t_SI .= "\<Esc>[5 q"

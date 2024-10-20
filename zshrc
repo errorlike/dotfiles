@@ -66,14 +66,6 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 source /etc/environment
-# 禁用互操作性质后添加需要使用的指令
-# export PATH="$PATH:/mnt/c/windows/System32"
-# export PATH="$PATH:/mnt/c/WINDOWS/System32/OpenSSH"
-# export PATH="$PATH:/mnt/c/Users/error/AppData/Local/Microsoft/WindowsApps"
-# export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
-# export PATH="$PATH:/mnt/d/Applications/Scoop/shims"
-# export PATH="$PATH:/mnt/d/Software/Microsoft VS Code/bin"
-# export PATH="$PATH:/mnt/d/Software/Git/mingw64/bin/git-credential-manager.exe"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -81,7 +73,6 @@ source /etc/environment
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    fd
     docker
     autoupdate
     zsh-syntax-highlighting
@@ -134,8 +125,6 @@ VI_MODE_CURSOR_INSERT=5
 VI_MODE_CURSOR_VISUAL=2
 # 修改按键延迟
 KEYTIMEOUT=5
-VI_MODE_DISABLE_CLIPBOARD=true
-
 # Fetch Windows ip address inside WSL environment
 
 # WINDOWS_IP=$(ip route | grep default | awk '{print $3}')
@@ -186,7 +175,11 @@ esac
 # 添加go的path
 export PATH=$PATH:/usr/local/go/bin
 
-eval "$(lua "$HOME"/z.lua/z.lua --init zsh once enhanced fzf)"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+eval "$(zoxide init zsh)"
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
 # nvim不同发行版
 alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
 alias nvl='NVIM_APPNAME="nvim-lazy" nvim'
@@ -198,3 +191,10 @@ bindkey '^[^M' self-insert-unmeta
 bindkey -M vicmd 'L' edit-command-line
 alias mv="mv -i"
 alias chx="chmod +x"
+alias ld='lazydocker'
+alias lg='lazygit'
+alias ze='zellij'
+# eval "$(zellij setup --generate-auto-start zsh)"
+function ch() { curl -m 7 "http://cheat.sh/$1"; }
+eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh --shims)"

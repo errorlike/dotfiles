@@ -118,6 +118,7 @@ workspaces:
   - name: "6"
     display_name: "6:OneNote"
   - name: "7"
+    display_name: "7:eudic"
   - name: "8"
   - name: "9"
 
@@ -130,6 +131,8 @@ window_rules:
   # - command: "ignore"
   #   match_process_name: "keyviz"
 
+  - command: "ignore"
+    match_process_name: "Pomatez"
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
     match_class_name: "#32770"
@@ -154,7 +157,10 @@ window_rules:
     match_process_name: "dbeaver"
 
   - command: "move to workspace 6"
-    match_process_name: "onenote"
+    match_process_name: "Onenote"
+
+  - command: "move to workspace 7"
+    match_process_name: "eudic"
 binding_modes:
   - name: "resize"
     keybindings:
