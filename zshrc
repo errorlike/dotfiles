@@ -182,19 +182,21 @@ eval "$(zoxide init zsh)"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 # nvim不同发行版
 alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
-alias nvl='NVIM_APPNAME="nvim-lazy" nvim'
-
-# 换行快捷键
-bindkey '^[^M' self-insert-unmeta
+alias nve='NVIM_APPNAME="nvim-experiment" nvim'
+alias nv='NVIM_APPNAME="nvim" nvim'
 
 # this remaps `vv` to `L`
 bindkey -M vicmd 'L' edit-command-line
 alias mv="mv -i"
 alias chx="chmod +x"
-alias ld='lazydocker'
-alias lg='lazygit'
-alias ze='zellij'
+alias ld="lazydocker"
+alias lg="lazygit"
+alias ze="zellij"
+alias py="python"
 # eval "$(zellij setup --generate-auto-start zsh)"
 function ch() { curl -m 7 "http://cheat.sh/$1"; }
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(mise activate zsh --shims)"
+
+export EDITOR=nvim
+export VISUAL="$EDITOR"
