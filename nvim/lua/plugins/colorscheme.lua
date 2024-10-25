@@ -5,6 +5,11 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
+      custom_highlights = function(colors)
+        return {
+          LineNr = { fg = "#F8F8F2" },
+        }
+      end,
       integrations = {
         aerial = true,
         alpha = true,
