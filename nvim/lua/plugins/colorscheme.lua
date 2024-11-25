@@ -1,11 +1,11 @@
 return {
-  -- add gruvbox
   {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
     opts = {
-      custom_highlights = function(colors)
+      transparent_background = true,
+      custom_highlights = function()
         return {
           LineNr = { fg = "#F8F8F2" },
         }
