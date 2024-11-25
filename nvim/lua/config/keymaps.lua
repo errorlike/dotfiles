@@ -13,3 +13,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["*y]], { desc = "copy to clipboard" 
 vim.keymap.set("n", "<leader>p", [["*p]], { desc = "paste from clipboard" })
 vim.keymap.set("n", "<leader>P", [["*P]], { desc = "paste from clipboard" })
 vim.keymap.set("n", "<leader>cb", ":cd %:p:h<CR>", { desc = "cd to current buffer" })
+
+-- Add empty lines before and after cursor line
+vim.keymap.set("n", "gO", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
+vim.keymap.set("n", "go", "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>")
