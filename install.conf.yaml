@@ -1,16 +1,16 @@
 - defaults:
-    link:
-      relink: true
-      create: true
+      link:
+          relink: true
+          create: true
 
 - clean: ["~"]
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
-    ~/.tldrrc: tldrrc
-    ~/.config/nvim: nvim
-
+      ~/.tmux.conf: tmux.conf
+      ~/.vimrc: vimrc
+      ~/.zshrc: zshrc
+      ~/.tldrrc: tldrrc
+      ~/.config/nvim: nvim
+      ~/.oh-my-zsh/custom: custom
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+      - [git submodule update --init --recursive, Installing submodules]
