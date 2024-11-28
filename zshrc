@@ -71,14 +71,18 @@ source /etc/environment
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# ZSH_TMUX_AUTOQUIT=false
 plugins=(
     git
     docker
+    python
     autoupdate
     zsh-syntax-highlighting
     tmux
     vi-mode
     golang
+    zellij
+    pdm
     zsh-autosuggestions
     docker-compose
     command-not-found
@@ -150,10 +154,9 @@ unset_proxy() {
     unset https_proxy
     git config --global --unset http.https://github.com.proxy
 }
-
 # Set alias
-alias proxy=set_proxy
-alias deproxy=unset_proxy
+alias spp=set_proxy
+alias upp=unset_proxy
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -183,7 +186,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # nvim不同发行版
 alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
 alias nve='NVIM_APPNAME="nvim-experiment" nvim'
-alias nv='NVIM_APPNAME="nvim" nvim'
+alias nv='nvim'
 
 # this remaps `vv` to `L`
 # bindkey -M vicmd 'L' edit-command-line
@@ -193,10 +196,29 @@ alias ld="lazydocker"
 alias lg="lazygit"
 alias ze="zellij"
 alias py="python"
-# eval "$(zellij setup --generate-auto-start zsh)"
+alias l='eza -laah'
+alias la='eza -lAh'
+alias ll='eza -lh'
+alias ls='eza --icons=auto'
+alias lsa='eza -lah'
 function ch() { curl -m 7 "http://cheat.sh/$1"; }
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(mise activate zsh --shims)"
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+
+ZELLIJ_AUTO_ATTACH=true
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    if [[ -z "$ZELLIJ" ]]; then
+        if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+            zellij attach -c --force-run-commands recurrent
+        else
+            zellij
+        fi
+
+        if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+            exit
+        fi
+    fi
+fi
