@@ -63,7 +63,7 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/.dotfiles/custom
 
 source /etc/environment
 # Which plugins would you like to load?
@@ -71,7 +71,6 @@ source /etc/environment
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# ZSH_TMUX_AUTOQUIT=false
 plugins=(
     git
     docker
@@ -129,8 +128,8 @@ VI_MODE_CURSOR_INSERT=5
 VI_MODE_CURSOR_VISUAL=2
 # 修改按键延迟
 KEYTIMEOUT=5
-# Fetch Windows ip address inside WSL environment
 
+# Fetch Windows ip address inside WSL environment
 # WINDOWS_IP=$(ip route | grep default | awk '{print $3}')
 WINDOWS_IP=localhost
 PROXY_HTTP="http://${WINDOWS_IP}:41091"
