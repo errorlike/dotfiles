@@ -7,5 +7,12 @@ return {
     -- Only one of these is needed.
     "nvim-telescope/telescope.nvim", -- optional
   },
-  event = "VeryLazy",
+  keys = {
+    { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit (Root dir)" },
+    -- { "<leader>gG", "<cmd>Neogit<cr>", desc = "Neogit (cwd)" },
+    opts = {
+      graph_style = "kitty",
+    },
+    event = "VeryLazy",
+  },
 }
