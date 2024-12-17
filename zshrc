@@ -65,7 +65,6 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=~/.dotfiles/custom
 
-source /etc/environment
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -80,6 +79,7 @@ plugins=(
     tmux
     vi-mode
     golang
+    mise
     zellij
     pdm
     zsh-autosuggestions
@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -127,7 +127,7 @@ VI_MODE_CURSOR_NORMAL=1
 VI_MODE_CURSOR_INSERT=5
 VI_MODE_CURSOR_VISUAL=2
 # 修改按键延迟
-KEYTIMEOUT=5
+KEYTIMEOUT=1
 
 # Fetch Windows ip address inside WSL environment
 # WINDOWS_IP=$(ip route | grep default | awk '{print $3}')
@@ -161,9 +161,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-source /etc/profile.d/maven.sh
-source /etc/profile.d/gradle.sh
-
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 # pnpm
@@ -173,9 +170,6 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# 添加go的path
-export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
@@ -201,7 +195,6 @@ alias ll='eza -lh'
 alias ls='eza --icons=auto'
 alias lsa='eza -lah'
 function ch() { curl -m 7 "http://cheat.sh/$1"; }
-eval "$(~/.local/bin/mise activate zsh)"
 eval "$(mise activate zsh --shims)"
 
 export EDITOR=nvim
@@ -211,7 +204,7 @@ ZELLIJ_AUTO_ATTACH=true
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     if [[ -z "$ZELLIJ" ]]; then
         if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-            zellij attach -c --force-run-commands recurrent
+            zellij attach -c recurrent
         else
             zellij
         fi
