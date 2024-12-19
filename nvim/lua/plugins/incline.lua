@@ -5,6 +5,9 @@ return {
     local helpers = require("incline.helpers")
     local devicons = require("nvim-web-devicons")
     require("incline").setup({
+      hide = {
+        cursorline = true,
+      },
       window = {
         padding = 0,
         margin = { horizontal = 0 },
