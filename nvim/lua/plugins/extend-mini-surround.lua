@@ -2,7 +2,7 @@ return {
   {
     "echasnovski/mini.surround",
     keys = {
-      vim.keymap.set("n", ";;;", ";;_", { remap = true }),
+      { ";;;", ";;_", remap = true, desc = "surround line" },
     },
     opts = {
       mappings = {
