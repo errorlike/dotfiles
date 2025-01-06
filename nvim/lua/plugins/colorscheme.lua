@@ -7,7 +7,7 @@ return {
       transparent_background = true,
       custom_highlights = function(colors)
         return {
-          LineNr = { fg = "#F8F8F2" },
+          LineNr = { fg = "#D3D3D3" },
           WinSeparator = { fg = colors.flamingo },
         }
       end,
