@@ -73,6 +73,7 @@ ZSH_CUSTOM=~/.dotfiles/custom
 plugins=(
     git
     docker
+    gpg-agent
     python
     autoupdate
     zsh-syntax-highlighting
@@ -90,6 +91,7 @@ plugins=(
     fzf
     colored-man-pages
     fzf-tab
+    gradle
 )
 source $ZSH/oh-my-zsh.sh
 
