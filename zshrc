@@ -184,7 +184,7 @@ alias nve='NVIM_APPNAME="nvim-experiment" nvim'
 alias nv='nvim'
 
 # this remaps `vv` to `L`
-# bindkey -M vicmd 'L' edit-command-line
+bindkey -M vicmd 'L' edit-command-line
 alias mv="mv -i"
 alias chx="chmod +x"
 alias ld="lazydocker"
@@ -216,3 +216,4 @@ if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm
         fi
     fi
 fi
+
