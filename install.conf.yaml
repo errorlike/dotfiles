@@ -12,5 +12,6 @@
       ~/.tldrrc: tldrrc
       ~/.config/nvim: nvim
       ~/.config/zellij/config.kdl: config.kdl
+      ~/.config/mise/config.toml: config.toml
 # - shell:
 #       - [git submodule update --init --recursive, Installing submodules]

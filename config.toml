@@ -1,0 +1,8 @@
+[tools]
+go = "latest"
+usage = "latest"
+maven = "latest"
+gradle = "latest"
+java = "temurin-21"
+python = "latest"
+neovim = "latest"
