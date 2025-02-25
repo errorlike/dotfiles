@@ -130,7 +130,7 @@ VI_MODE_CURSOR_INSERT=5
 VI_MODE_CURSOR_VISUAL=2
 # 修改按键延迟
 KEYTIMEOUT=1
-
+VI_MODE_DISABLE_CLIPBOARD=true
 # Fetch Windows ip address inside WSL environment
 # WINDOWS_IP=$(ip route | grep default | awk '{print $3}')
 WINDOWS_IP=localhost
@@ -173,11 +173,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
 
 eval "$(zoxide init zsh)"
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
 # nvim不同发行版
 alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
 alias nve='NVIM_APPNAME="nvim-experiment" nvim'
@@ -216,4 +214,3 @@ if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm
         fi
     fi
 fi
-
