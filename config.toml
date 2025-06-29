@@ -6,3 +6,9 @@ gradle = "latest"
 java = "temurin-21"
 python = "latest"
 neovim = "latest"
+duf = "latest"
+dust = "latest"
+fzf = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = []
