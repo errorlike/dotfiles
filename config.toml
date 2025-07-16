@@ -9,6 +9,10 @@ neovim = "latest"
 duf = "latest"
 dust = "latest"
 fzf = "latest"
+lazygit = "latest"
+eza = "latest"
+yazi = "latest"
+zellij = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
