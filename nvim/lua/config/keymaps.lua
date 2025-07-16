@@ -14,7 +14,6 @@ vim.keymap.set("n", "<leader>p", [["*p]], { desc = "paste from clipboard" })
 vim.keymap.set("n", "<leader>P", [["*P]], { desc = "paste from clipboard" })
 vim.keymap.set("n", "<leader>cb", ":cd %:p:h<CR>", { desc = "cd to current buffer" })
 
--- Add empty lines before and after cursor line
 vim.keymap.set(
   "n",
   "gO",
@@ -27,3 +26,7 @@ vim.keymap.set(
   "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>",
   { desc = "add blank line below" }
 )
+vim.keymap.set("n", "<leader>m", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], { desc = "bulk motify word" })
+vim.keymap.set("n", "U", "<c-r>", { desc = "redo" })
+vim.keymap.set("o", "H", "^")
+vim.keymap.set("o", "L", "g_")
