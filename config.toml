@@ -13,6 +13,8 @@ lazygit = "latest"
 eza = "latest"
 yazi = "latest"
 zellij = "latest"
+uv = "latest"
+node = "lts"
 
 [settings]
 idiomatic_version_file_enable_tools = []
