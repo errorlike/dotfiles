@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     keys = {
       { ";;;", ";;_", remap = true, desc = "surround line" },
     },
