@@ -33,6 +33,11 @@ return {
       "<cmd>Gitsigns undo_stage_hunk<cr>",
       desc = "Undo Stage Hunk",
     },
+    {
+      "<leader>hU",
+      "<cmd>Gitsigns reset_buffer_index<cr>",
+      desc = "Reset Buffer",
+    },
     { "<leader>hp", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview Hunk Inline" },
   },
 }
