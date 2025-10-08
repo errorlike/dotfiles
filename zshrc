@@ -84,6 +84,7 @@ plugins=(
     zellij
     pdm
     zsh-autosuggestions
+    uv
     docker-compose
     command-not-found
     mvn
@@ -173,13 +174,12 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
 eval "$(zoxide init zsh)"
 
 # nvim不同发行版
 alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
 alias nve='NVIM_APPNAME="nvim-experiment" nvim'
-alias nv='nvim'
+alias v='nvim'
 
 # this remaps `vv` to `L`
 bindkey -M vicmd 'L' edit-command-line
@@ -194,8 +194,13 @@ alias la='eza -lAh'
 alias ll='eza -lh'
 alias ls='eza --icons=auto'
 alias lsa='eza -lah'
+alias tl='tldr'
+alias ve='source .venv/bin/activate'
+alias de='deactivate'
 function ch() { curl -m 7 "http://cheat.sh/$1"; }
 eval "$(mise activate zsh --shims)"
+alias copy="clip.exe"
+alias paste="powershell.exe Get-Clipboard"
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
