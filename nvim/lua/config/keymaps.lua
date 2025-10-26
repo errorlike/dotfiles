@@ -26,7 +26,12 @@ vim.keymap.set(
   "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>",
   { desc = "add blank line below" }
 )
-vim.keymap.set("n", "<leader>m", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], { desc = "bulk motify word" })
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>m",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]],
+  { desc = "bulk motify word" }
+)
 vim.keymap.set("n", "U", "<c-r>", { desc = "redo" })
 vim.keymap.set("o", "H", "^")
 vim.keymap.set("o", "L", "g_")
