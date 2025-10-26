@@ -205,17 +205,17 @@ alias paste="powershell.exe Get-Clipboard"
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
-ZELLIJ_AUTO_ATTACH=true
-if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
-    if [[ -z "$ZELLIJ" ]]; then
-        if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-            zellij attach -c recurrent
-        else
-            zellij
-        fi
-
-        if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-            exit
-        fi
-    fi
-fi
+# ZELLIJ_AUTO_ATTACH=true
+# if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
+#     if [[ -z "$ZELLIJ" ]]; then
+#         if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+#             zellij attach -c recurrent
+#         else
+#             zellij
+#         fi
+#
+#         if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+#             exit
+#         fi
+#     fi
+# fi
