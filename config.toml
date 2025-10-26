@@ -2,11 +2,9 @@
 go = "latest"
 usage = "latest"
 maven = "latest"
-gradle = "latest"
 java = "temurin-21"
-python = "latest"
+python = "3.13"
 neovim = "latest"
-duf = "latest"
 dust = "latest"
 fzf = "latest"
 lazygit = "latest"
@@ -15,6 +13,9 @@ yazi = "latest"
 zellij = "latest"
 uv = "latest"
 node = "lts"
+sd = "latest"
+duf = "latest"
+delta = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
