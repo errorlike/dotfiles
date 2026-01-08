@@ -12,10 +12,14 @@ eza = "latest"
 yazi = "latest"
 zellij = "latest"
 uv = "latest"
-node = "lts"
 sd = "latest"
 duf = "latest"
 delta = "latest"
+node = "lts"
+bun = "latest"
+opencode = "latest"
+gemini = "latest"
+ast-grep = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
