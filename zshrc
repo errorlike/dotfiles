@@ -93,6 +93,7 @@ plugins=(
     colored-man-pages
     fzf-tab
     gradle
+    tldr
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -195,8 +196,10 @@ alias ll='eza -lh'
 alias ls='eza --icons=auto'
 alias lsa='eza -lah'
 alias tl='tldr'
-alias ve='source .venv/bin/activate'
+alias sv='source .venv/bin/activate'
 alias de='deactivate'
+alias ir='iredis'
+alias ff='fastfetch'
 function ch() { curl -m 7 "http://cheat.sh/$1"; }
 eval "$(mise activate zsh --shims)"
 alias copy="clip.exe"
