@@ -20,6 +20,7 @@ bun = "latest"
 opencode = "latest"
 gemini = "latest"
 ast-grep = "latest"
+pnpm = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []

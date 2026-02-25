@@ -14,5 +14,6 @@
     ~/.config/zellij/config.kdl: config.kdl
     ~/.config/mise/config.toml: config.toml
     ~/.ideavimrc: ideavimrc
+    ~/.config/uv/uv.toml: uv.toml
 # - shell:
 #       - [git submodule update --init --recursive, Installing submodules]
