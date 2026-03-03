@@ -5,3 +5,6 @@
 [submodule "custom/plugins/autoupdate"]
 	path = custom/plugins/autoupdate
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "custom/plugins/fzf-tab"]
+	path = custom/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab.git
