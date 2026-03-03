@@ -8,3 +8,6 @@
 [submodule "custom/plugins/fzf-tab"]
 	path = custom/plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab.git
+[submodule "custom/plugins/zsh-autosuggestions"]
+	path = custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
