@@ -21,6 +21,10 @@ opencode = "latest"
 gemini = "latest"
 ast-grep = "latest"
 pnpm = "latest"
+zoxide = "latest"
+fd = "latest"
+rg = "latest"
+lua = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
