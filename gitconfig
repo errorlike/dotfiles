@@ -1,0 +1,9 @@
+[user]
+	email = errorlikeman@gmail.com
+	name = YangYanxiong
+[http "https://github.com"]
+	proxy = http://localhost:41091
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+[alias]
+	lol = log --graph --oneline --decorate --color --all
