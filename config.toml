@@ -25,6 +25,13 @@ fd = "latest"
 rg = "latest"
 bat = "latest"
 pnpm = "latest"
+lazyssh = "latest"
+lazyjournal = "latest"
+lazydocker = "latest"
+btop = "latest"
+fastfetch = "latest"
+jq = "latest"
+choose = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
